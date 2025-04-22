@@ -1,15 +1,16 @@
 const express = require("express");
 const cors = require("cors");
+const serverless = require('serverless-http');
 const app = express();
 require("dotenv").config();
 const PORT = process.env.PORT || 3000;
 
 // Routes Imports
-const authRoute = require("./routes/authRoutes");
-const profileRoute = require("./routes/profileRoutes");
-const timesheetRoute = require("./routes/timesheetRoute");
-const projectsRoute =require("./routes/projectRoutes");
-const checkInsRoute = require("./routes/checkinRoutes")
+const authRoute = require("../routes/authRoutes");
+const profileRoute = require("../routes/profileRoutes");
+const timesheetRoute = require("../routes/timesheetRoute");
+const projectsRoute =require("../routes/projectRoutes");
+const checkInsRoute = require("../routes/checkinRoutes")
 
 // Middleware
 app.use(express.json());
@@ -28,3 +29,4 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
+module.exports.handler = serverless(app);
