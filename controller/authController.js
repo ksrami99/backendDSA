@@ -12,7 +12,7 @@ const authConfig = {
 
 const auth = (req, res) => {
   res.redirect(
-    "https://launchpad.37signals.com/authorization/new?client_id=a7a504f4ab3d434a56c58b3a0fef6a27c638b750&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&type=web_server"
+    "https://launchpad.37signals.com/authorization/new?client_id=a7a504f4ab3d434a56c58b3a0fef6a27c638b750&redirect_uri=https%3A%2F%2Fbackenddsa-ljiq.onrender.com%2Fcallback&type=web_server"
   );
 };
 
