@@ -55,11 +55,11 @@ const callback = async (req, res) => {
 
 
     // Redirect to the frontend dashboard with the token as a URL parameter
-    res.redirect(`http://localhost:4000/loading?token=${tokens.access_token}&userId=${user.data.id}`);
+    res.redirect(`https://daily-status-automation.vercel.app/loading?token=${tokens.access_token}&userId=${user.data.id}`);
 
   } catch (error) {
     console.log("Error during OAuth callback:", error);
-    res.redirect(`http://localhost:4000/?error=${encodeURIComponent(error.message)}`);
+    res.redirect(`https://daily-status-automation.vercel.app/?error=${encodeURIComponent(error.message)}`);
   }
 };
 
