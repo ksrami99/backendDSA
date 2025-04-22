@@ -6,11 +6,11 @@ require("dotenv").config();
 const PORT = process.env.PORT || 3000;
 
 // Routes Imports
-const authRoute = require("../routes/authRoutes");
-const profileRoute = require("../routes/profileRoutes");
-const timesheetRoute = require("../routes/timesheetRoute");
-const projectsRoute =require("../routes/projectRoutes");
-const checkInsRoute = require("../routes/checkinRoutes")
+const authRoute = require("./routes/authRoutes");
+const profileRoute = require("./routes/profileRoutes");
+const timesheetRoute = require("./routes/timesheetRoute");
+const projectsRoute =require("./routes/projectRoutes");
+const checkInsRoute = require("./routes/checkinRoutes")
 
 // Middleware
 app.use(express.json());
