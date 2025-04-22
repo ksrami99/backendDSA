@@ -29,4 +29,4 @@ app.use("/", checkInsRoute);
 //   console.log(`Server running on port ${PORT}`);
 // }); 
 
-module.exports.handler = serverless(app);
+module.exports = serverless(app);
